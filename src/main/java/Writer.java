@@ -4,8 +4,8 @@ import java.nio.file.FileAlreadyExistsException;
 
 public class Writer {
 
-    public void writeString(String json) {
-        try (FileWriter writer = new FileWriter("data.json", true)) {
+    public void writeString(String json, String fileName) {
+        try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(json);
             writer.append('\n');
             writer.flush();
